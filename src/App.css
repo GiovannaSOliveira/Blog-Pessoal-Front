@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Pro&display=swap');
+
+.font-bebas {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-sofia {
+  font-family: 'Sofia Pro', sans-serif;
+}
+
+
+
