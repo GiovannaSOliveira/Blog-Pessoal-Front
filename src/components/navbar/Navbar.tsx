@@ -6,7 +6,7 @@ function Navbar() {
       <div className="w-full bg-purpur text-white flex justify-center py-4">
         <div className="container flex justify-between m-3 text-lg">
           <div
-            className="text-3x1 font-playfair font-bold uppercase text-kind 
+            className="text-2xl font-playfair font-bold uppercase text-kind 
           hover:text-mustard hover:cursor-pointer pl-5"
           >
             <Link to="/home">Blog Pessoal</Link>
