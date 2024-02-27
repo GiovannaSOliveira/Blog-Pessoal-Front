@@ -70,12 +70,12 @@ function Cadastro() {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
+      <div className="flex font-bold justify-center h-screen">
         <div className="fundoCadastro hidden lg:block"></div>
         <form className='flex justify-center items-center flex-col w-2/3 gap-3' onSubmit={cadastrarNovoUsuario}>
           <h2 className='text-mustard font-playfair text-5xl'>Cadastrar</h2>
-          <div className="flex flex-col w-full text-rosebutton">
-            <label htmlFor="nome" className='pl-4 font-bebas'>Nome</label>
+          <div className="flex flex-col w-full text-rosebutton  font-bebas text-xl">
+            <label htmlFor="nome" className='pl-4'>Nome</label>
             <input
               type="text"
               id="nome"
@@ -88,22 +88,22 @@ function Cadastro() {
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
-          <div className="flex flex-col w-full text-rosebutton">
-            <label htmlFor="usuario" className='pl-4 font-bebas'>Usuario</label>
+          <div className="flex flex-col w-full text-rosebutton font-bebas text-xl">
+            <label htmlFor="usuario" className='pl-4'>Usuario</label>
             <input
               type="text"
               id="usuario"
               name="usuario"
-              placeholder="Usuario"
+              placeholder="Email"
               className="border-2 border-purpur text-gray-500 text-left px-4
-            focus:text-rosinha focus:border-rosebud 
+            focus:text-rosinha focus:border-rosebud
             focus:outline-none rounded-full p-2"
               value={usuario.usuario} 
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
-          <div className="flex flex-col w-full text-rosebutton">
-            <label htmlFor="foto" className='pl-4 font-bebas'>Foto</label>
+          <div className="flex flex-col w-full text-rosebutton font-bebas text-xl">
+            <label htmlFor="foto" className='pl-4'>Foto</label>
             <input
               type="text"
               id="foto"
@@ -116,8 +116,8 @@ function Cadastro() {
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
-          <div className="flex flex-col w-full text-rosebutton">
-            <label htmlFor="senha" className='pl-4 font-bebas'>Senha</label>
+          <div className="flex flex-col w-full text-rosebutton font-bebas text-xl">
+            <label htmlFor="senha" className='pl-4'>Senha</label>
             <input
               type="password"
               id="senha"
@@ -130,8 +130,8 @@ function Cadastro() {
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
-          <div className="flex flex-col w-full text-rosebutton">
-            <label htmlFor="confirmarSenha" className='pl-4 font-bebas'>Confirmar Senha</label>
+          <div className="flex flex-col w-full text-rosebutton font-bebas text-xl">
+            <label htmlFor="confirmarSenha" className='pl-4'>Confirmar Senha</label>
             <input
               type="password"
               id="confirmarSenha"
