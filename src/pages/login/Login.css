@@ -2,10 +2,14 @@ body{
   background-color: #0f0d0f;
 }
 .fundoLogin {
-    background-image: url(../../assets/login.jpg);
+    background-image: url(../../assets/img/nuv.jpg);
     background-repeat: no-repeat;
     min-height: 100vh;
     width: 100%;
     background-size: cover;
     background-position: center;
+    border-radius: 10px;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
   }
+  

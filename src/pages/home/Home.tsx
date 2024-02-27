@@ -1,25 +1,32 @@
-import "./Home.css";
-import { useContext } from "react";
-import { UserContext } from "../../contexts/UserContext";
-import { Link, useNavigate } from "react-router-dom";
+import './Home.css';
+import ListaPostagens from '../../components/postagens/listaPostagens/ListaPostagens';
+import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
+import img from "../../assets/img/write.png";
 
 function Home() {
-  const { nome, setNome } = useContext(UserContext);
-
-  return (
-    <div className="flex justify-center items-center">
-      <div>
-        <h2 className="text-mustard text-5xl my-4">Logar</h2>
-        <h2 className="text-offwhite">Olá {nome}</h2>
-        <Link
-          to="/login"
-          className="my-4 rounded bg-rosebutton hover:bg-rosebud
-          text-white w-1/2 py-2 flex justify-center">
-          Voltar
-        </Link>
-      </div>
-    </div>
-  );
+    return (
+        <>
+        <div className="bg-purpur flex justify-center border-offwhite border-y-2">
+          <div className='container grid grid-cols-2 text-white'>
+            <div className="flex flex-col gap-4 items-center justify-center py-4">
+              <h2 className='text-5xl font-bold font-dm text-kind'>Seja bem vinde!</h2>
+              <p className='text-xl text-offwhite font-playfair pb-5'>Expresse aqui seus pensamentos e opniões</p>
+  
+              <div className="flex justify-around gap-4">
+              <ModalPostagem />
+              <button className='rounded-full bg-offwhite text-rosebud text-xl font-bebas py-2 px-4'>Ver postagens</button>
+            </div>
+            </div>
+  
+            <div className="flex justify-center ">
+              <img src={img} alt="" className='w-2/3 pb-5 border-5 border-offwhite' />
+      
+            </div>
+          </div>
+        </div>
+        <ListaPostagens />
+      </>
+    );
 }
 
-export default Home
+export default Home;

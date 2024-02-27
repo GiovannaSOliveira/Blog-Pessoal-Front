@@ -108,7 +108,7 @@ function FormularioTema() {
             name="descricao"
             className="border-2 border-purpur text-gray-500 text-left px-4
             focus:text-rosinha focus:border-rosebud 
-            focus:outline-none rounded-full p-2"
+            focus:outline-none rounded-full p-2 font-bold"
             value={tema.descricao}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />

@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Usuario from '../../models/Usuario'
 import { cadastrarUsuario } from '../../services/Service'
@@ -14,16 +14,16 @@ function Cadastro() {
     id: 0,
     nome: '',
     usuario: '',
+    foto: '',
     senha: '',
-    foto: ''
   })
 
   const [usuarioResposta, setUsuarioResposta] = useState<Usuario>({
     id: 0,
     nome: '',
     usuario: '',
+    foto: '',
     senha: '',
-    foto: ''
   })
 
   useEffect(() => {

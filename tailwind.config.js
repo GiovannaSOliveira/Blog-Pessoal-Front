@@ -12,6 +12,7 @@ module.exports = {
         offwhite: "#e9dfd3",
         rosinha: "#be616a",
         rosebutton:"#aa556c",
+        fundo: "#0f0d0f"
       },
     },
   },
