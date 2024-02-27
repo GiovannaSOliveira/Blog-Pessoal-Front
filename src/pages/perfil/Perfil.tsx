@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import pho from "../../assets/img/pho.jpg";
 import pfp from "../../assets/img/pfp.jpg";
+import { toastAlert } from "../../util/toastAlert";
+
 function Perfil() {
   let navigate = useNavigate();
 
@@ -10,7 +12,7 @@ function Perfil() {
 
   useEffect(() => {
     if (usuario.token === "") {
-      alert("Você precisa estar logado");
+      toastAlert("Você precisa estar logado", "info");
       navigate("/login");
     }
   }, [usuario.token]);
