@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Postagem from "../../../models/Postagem";
+import pfp from "../../../assets/img/pfp.jpg"
 
 interface CardPostagemProps {
   post: Postagem;
@@ -11,7 +12,7 @@ function CardPostagem({ post }: CardPostagemProps) {
       <div>
         <div className="flex w-full bg-purpur py-2 px-4 items-center text-offwhite gap-4">
           <img
-            src={post.usuario?.foto}
+            src={post.usuario?.foto || pfp}
             className="h-12 rounded-full"
             alt="Foto de perfil"
           />
