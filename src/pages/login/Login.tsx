@@ -77,7 +77,7 @@ function Login() {
           <button
             type="submit"
             className="rounded-full bg-rosebutton hover:bg-rosebud 
-            text-offwhite w-1/2 py-2 flex justify-center font-bebas"
+            text-offwhite w-1/2 py-2 flex justify-center font-bebas text-xl"
           >
             {isLoading ? (
               <RotatingLines
@@ -94,9 +94,9 @@ function Login() {
 
           <hr className="border-slate-800 w-full" />
 
-          <p className="text-offwhite">
+          <p className="text-offwhite text-xl">
             Ainda não tem uma conta?{" "}
-            <Link to="/cadastro" className="pl-3 font-bebas text-rosebutton hover:text-rosebud hover:cursor-pointer">
+            <Link to="/cadastro" className="pl-3 font-bebas text-xl text-rosebutton hover:text-rosebud hover:cursor-pointer">
               Cadastre-se
             </Link>
           </p>

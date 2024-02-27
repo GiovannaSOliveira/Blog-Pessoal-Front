@@ -144,10 +144,10 @@ function Cadastro() {
             />
           </div>
           <div className="flex justify-around w-full gap-8">
-            <button className='rounded-full font-bebas text-offwhite bg-purpur hover:bg-rosebud w-1/2 py-2' onClick={back}>
+            <button className='rounded-full font-bebas text-xl text-offwhite bg-purpur hover:bg-rosebud w-1/2 py-2' onClick={back}>
               Cancelar
             </button>
-            <button className='rounded-full font-bebas text-offwhite bg-rosebutton hover:bg-rosebud w-1/2 py-2' type='submit'>
+            <button className='rounded-full font-bebas text-xl text-offwhite bg-rosebutton hover:bg-rosebud w-1/2 py-2' type='submit'>
               Cadastrar
             </button>
           </div>
