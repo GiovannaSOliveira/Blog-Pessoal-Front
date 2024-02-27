@@ -1,8 +1,6 @@
 import { ChangeEvent, useContext, useEffect, useState } from "react";
 import "./Login.css";
-
 import { Link, useNavigate } from "react-router-dom";
-
 import { AuthContext } from "../../contexts/AuthContext";
 import UsuarioLogin from "../../models/UsuarioLogin";
 import { RotatingLines } from "react-loader-spinner";
@@ -38,22 +36,22 @@ function Login() {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
+      <div className=" flex font-bold justify-center h-screen">
         <form
           className="flex justify-center items-center flex-col w-1/2 gap-4"
           onSubmit={login}
         >
           <h2 className="text-mustard font-playfair text-5xl ">Entrar</h2>
           <div className="flex flex-col w-full text-rosebutton">
-            <label htmlFor="usuario" className="pl-4 font-bebas">Usuário</label>
+            <label htmlFor="usuario" className="pl-4 font-bebas text-xl">Usuário</label>
             <input
               type="text"
               id="usuario"
               name="usuario"
               placeholder="Usuário"
               className="border-2 border-purpur text-gray-500 
-              focus:text-rosinha focus:border-rosebud 
-              focus:outline-none rounded-full p-2 pl-4"
+              focus:text-rosinha focus:border-rosebud text-xl
+              focus:outline-none rounded-full p-2 pl-4 font-bebas"
               value={usuarioLogin.usuario}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 atualizarEstado(e)
@@ -61,15 +59,15 @@ function Login() {
             />
           </div>
           <div className="flex flex-col w-full text-rosebutton">
-            <label htmlFor="senha" className="pl-4 font-bebas">Senha</label>
+            <label htmlFor="senha" className="pl-4 font-bebas text-xl">Senha</label>
             <input
               type="password"
               id="senha"
               name="senha"
               placeholder="Senha"
               className="border-2 border-purpur text-gray-500 text-left px-4
-              focus:text-rosinha focus:border-rosebud 
-              focus:outline-none rounded-full p-2 pl-4"
+              focus:text-rosinha focus:border-rosebud text-xl
+              focus:outline-none rounded-full p-2 pl-4 font-bebas"
               value={usuarioLogin.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 atualizarEstado(e)
@@ -78,7 +76,7 @@ function Login() {
           </div>
           <button
             type="submit"
-            className="rounded bg-rosebutton hover:bg-rosebud 
+            className="rounded-full bg-rosebutton hover:bg-rosebud 
             text-offwhite w-1/2 py-2 flex justify-center font-bebas"
           >
             {isLoading ? (
@@ -103,7 +101,6 @@ function Login() {
             </Link>
           </p>
         </form>
-        <div className="fundoLogin hidden lg:block"></div>
       </div>
     </>
   );

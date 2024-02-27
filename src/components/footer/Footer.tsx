@@ -1,13 +1,23 @@
 import { GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/AuthContext";
 
 function Footer() {
-  return (
+  
+  const { usuario, handleLogout } = useContext(AuthContext)
+
+  let footerComponent
+
+  let data = new Date().getFullYear()
+
+  if(usuario.token !== '') {
+    footerComponent = (
     <>
       <div className="flex justify-center bg-dark text-white">
 
         <div className="container flex flex-col items-center py-4">
           <p className="text-2xl font-bebas text-mustard">
-            Blog Pessoal Generation | Copyright: Giovanna Oliveira
+            Blog Pessoal Generation | Copyright: {data}
           </p>
           <p className="text-lg font-bebas text-rosebud">Acesse nossas redes sociais</p>
           <div className="flex gap-2">
@@ -19,7 +29,13 @@ function Footer() {
         
       </div>
     </>
-  );
+    )
+  }
+  return (
+    <>
+      {footerComponent}
+    </>
+  )
 }
 
 export default Footer;

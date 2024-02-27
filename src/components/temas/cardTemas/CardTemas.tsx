@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Tema from "../../../models/Tema";
+import Masonry from "react-masonry-css";
 
 interface CardTemaProps {
   tema: Tema;
@@ -7,11 +8,16 @@ interface CardTemaProps {
 
 function CardTemas({ tema }: CardTemaProps) {
   return (
-    <div className="border-purpur flex flex-col rounded-2xl overflow-hidden justify-between">
-      <header className="py-2 px-6 bg-purpur text-offwhite font-bold font-playfair text-2xl">
+    <Masonry
+    breakpointCols={{ default: 3, 1100: 2, 7000: 1 }}
+    className="my-masonry-grid"
+    columnClassName="my-masonry-grid_column"
+  >
+    <div className="border border-offwhite flex flex-col rounded-2xl overflow-hidden justify-between">
+      <header className="py-2 px-6 bg-purpur text-kind font-bold font-dm text-2xl">
         Tema
       </header>
-      <p className="p-8 text-xl font-sofia bg-white text-gray-700 h-full">{tema.descricao}</p>
+      <p className="p-8 text-2xl font-crimson bg-white text-gray-700 h-full">{tema.descricao}</p>
       <div className="flex">
         <Link
           to={`/editarTema/${tema.id}`}
@@ -29,6 +35,7 @@ function CardTemas({ tema }: CardTemaProps) {
         </Link>
       </div>
     </div>
+    </Masonry>
   );
 }
 
